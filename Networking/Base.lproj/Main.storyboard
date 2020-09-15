@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,59 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enE-NR-OU1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuP-7N-VbZ">
+                                <rect key="frame" x="20" y="366" width="374" height="165"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-QB-NIS">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <connections>
+                                    <action selector="getImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qg9-e9-A0E"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="uSM-Fr-UZ7">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="enE-NR-OU1" secondAttribute="trailing" id="3fQ-em-mpm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OuP-7N-VbZ" secondAttribute="trailing" constant="20" id="8hf-ab-MSW"/>
+                            <constraint firstItem="enE-NR-OU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DuR-0P-7EO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OuP-7N-VbZ" secondAttribute="bottom" constant="331" id="E87-43-cbG"/>
+                            <constraint firstItem="uSM-Fr-UZ7" firstAttribute="centerX" secondItem="enE-NR-OU1" secondAttribute="centerX" id="FTw-1c-6VV"/>
+                            <constraint firstItem="H4J-QB-NIS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LYy-YI-5aM"/>
+                            <constraint firstItem="OuP-7N-VbZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="322" id="SiX-4L-mFO"/>
+                            <constraint firstItem="enE-NR-OU1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="UFQ-uv-Xs4"/>
+                            <constraint firstItem="OuP-7N-VbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z5J-nh-hFC"/>
+                            <constraint firstItem="enE-NR-OU1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="aIU-Jc-8vQ"/>
+                            <constraint firstItem="H4J-QB-NIS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fX0-mg-KtT"/>
+                            <constraint firstItem="H4J-QB-NIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l6f-Dg-Hgu"/>
+                            <constraint firstItem="uSM-Fr-UZ7" firstAttribute="centerY" secondItem="enE-NR-OU1" secondAttribute="centerY" constant="5" id="wLA-wn-W3T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H4J-QB-NIS" secondAttribute="trailing" constant="20" id="wQg-Yf-TpO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="uSM-Fr-UZ7" id="8R1-g9-Pyp"/>
+                        <outlet property="getImageButton" destination="H4J-QB-NIS" id="tWJ-SH-f0h"/>
+                        <outlet property="imageViewPic" destination="enE-NR-OU1" id="kdR-Hr-LM8"/>
+                        <outlet property="label" destination="OuP-7N-VbZ" id="Bhw-Wd-sgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
