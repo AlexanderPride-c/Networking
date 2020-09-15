@@ -35,6 +35,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func postRequest(_ sender: Any) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        
+        let userData = ["Course": "Networking", "Lesson": "GET and POST request"]
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }
+        request.httpBody = httpBody
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, request, error) in
+            guard let request = request, let data = data else { return }
+            print(request)
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error)
+            }
+        }.resume()
     }
     
 }
