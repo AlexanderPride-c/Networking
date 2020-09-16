@@ -20,10 +20,6 @@ class ImageViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         fetch()
     }
-    
-   
-        
-       
 
     func fetch() {
         
