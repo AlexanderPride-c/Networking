@@ -20,6 +20,7 @@
 		2E60124025122C0800FF9190 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60123F25122C0800FF9190 /* WebViewController.swift */; };
 		2E60124225122C2F00FF9190 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60124125122C2F00FF9190 /* CourseViewController.swift */; };
 		2E6012482512345400FF9190 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6012472512345400FF9190 /* WebsiteDescription.swift */; };
+		2E60124B251253F000FF9190 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E60124A251253F000FF9190 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2E60123F25122C0800FF9190 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		2E60124125122C2F00FF9190 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		2E6012472512345400FF9190 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
+		2E60124A251253F000FF9190 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E60124B251253F000FF9190 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 			children = (
 				2E60122225107D5500FF9190 /* Networking */,
 				2E60122125107D5500FF9190 /* Products */,
+				2E601249251253F000FF9190 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +122,14 @@
 				2E60122E25107D5C00FF9190 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2E601249251253F000FF9190 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E60124A251253F000FF9190 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
